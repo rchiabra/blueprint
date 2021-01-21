@@ -1,7 +1,7 @@
 #######################################
 # Create the resource group
 #######################################
-resource "ibm_resource_group" "group" {
+data "ibm_resource_group" "group" {
   name     = var.environment_name
 }
 
