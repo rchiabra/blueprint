@@ -6,7 +6,7 @@ variable "ibmcloud_region" {
 }
 variable "environment_name" {
     description = "resource group name"
-    default = "blueprint_base"
+    default = "Default"
 }
 
 variable "cloudantnosqldb_plan" {
