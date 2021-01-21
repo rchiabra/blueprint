@@ -14,7 +14,7 @@ resource "ibm_resource_instance" "database" {
     service           = "cloudantnosqldb"
     plan              = var.cloudantnosqldb_plan
     location          = var.cloudantnosqldb_location
-    resource_group_id = ibm_resource_group.group.id
+    resource_group_id = data.ibm_resource_group.group.id
 }
 # a cloud object storage
 resource "ibm_resource_instance" "objectstorage" {
@@ -22,7 +22,7 @@ resource "ibm_resource_instance" "objectstorage" {
     service           = "cloud-object-storage"
     plan              = var.cloudobjectstorage_plan
     location          = var.cloudobjectstorage_location
-    resource_group_id = ibm_resource_group.group.id
+    resource_group_id = data.ibm_resource_group.group.id
 }
 
 # a LogDNA service
@@ -31,5 +31,5 @@ resource "ibm_resource_instance" "logging" {
     service           = "logdna"
     plan              = var.logdna_plan
     location          = var.logdna_location
-    resource_group_id = ibm_resource_group.group.id
+    resource_group_id = data.ibm_resource_group.group.id
 }
